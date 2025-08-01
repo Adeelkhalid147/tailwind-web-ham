@@ -7,6 +7,50 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: echo "Test"
+      - name: Checkout code
+        uses: actions/checkout@v4
       - run: npm run build
 
       
+
+
+
+
+
+#       name: Deploy to VM
+
+# on:
+#   push:
+#     branches: [ main ]
+
+# jobs:
+#   deploy:
+#     # Use self-hosted runner on your VM
+#     runs-on: self-hosted
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+
+#       - name: Build app
+#         run: |
+#           # Build commands (customize for your stack)
+#           npm install
+#           npm run build
+
+#       - name: Deploy
+#         run: |
+#           # Direct deployment (no SSH needed - runner is on VM!)
+#           # Define your app path
+#           APP_PATH="/var/www/myapp"
+          
+#           # Create directory if missing
+#           sudo mkdir -p $APP_PATH
+          
+#           # Copy files to app directory
+#           sudo cp -r ./* $APP_PATH/
+          
+#           # Set permissions
+#           sudo chown -R www-data:www-data $APP_PATH
+          
+#           # Restart service (example for systemd)
+#           sudo systemctl restart myapp
