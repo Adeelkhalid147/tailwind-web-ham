@@ -22,7 +22,7 @@ function Hero() {
             <p className="mt-6 text-xl text-slate-600">
               Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI),
               Cloud, Edge, Ambient Computing/IoT, Network Automation, and
-              Bioinformatics Technologies
+              Bioinformatics Technologiess
             </p>
             <div className="mt-7">
               <Button text={"Enroll Now"}/>
