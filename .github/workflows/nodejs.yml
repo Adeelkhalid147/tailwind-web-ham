@@ -7,8 +7,9 @@ jobs:
     runs-on: self-hosted
     steps:
       - run: echo "Test"
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - name: Checkout code          # all command start with (-)
+        uses: actions/checkout@v4    # detail of command
+      - run: npm i
       - run: npm run build
 
       
