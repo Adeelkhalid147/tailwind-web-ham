@@ -9,7 +9,7 @@ jobs:
       - run: echo "Test"
       - name: Checkout code          # all command start with (-)
         uses: actions/checkout@v4    # detail of command
-      - run: npm i
+      - run: npm ci       # npm ci clean and install
       - run: npm run build
 
       
